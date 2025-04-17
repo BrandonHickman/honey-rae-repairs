@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllTickets } from "../../services/ticketService"
 import "./Tickets.css"
+import { Ticket } from "./Ticket.jsx"
 
 export const TicketList = () => {
     const [allTickets, setAllTickets] = useState([])
@@ -49,7 +50,7 @@ export const TicketList = () => {
             </div>
             <article className="tickets">
                 {filteredTickets.map((ticketObj) => {
-                    return <Ticket ticket={ticketObj} name="Joe" key={ticketObj.id}/>
+                    return <Ticket ticket={ticketObj} name="Joe" key={ticketObj.id} />
                 })}
             </article>
         </div>
